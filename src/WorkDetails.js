@@ -25,7 +25,7 @@ const WorkDetails = [
 		title: "Tea-Plates.js",
 		subtitle: "Another javascript templating engine",
 		description:
-			"ea-Plates accepts JSON and a creates a templating string from the provided JSON Object.",
+			"Tea-Plates accepts JSON and a creates a templating string from the provided JSON Object.",
 		platforms: ["Web"],
 		languages: ["Javascript", "HTML", "CSS"],
 		links: [
