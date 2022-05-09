@@ -1,0 +1,103 @@
+@font-face {
+  font-family: "PlayfairItalic";
+  src: local("PlayfairItalic"),
+    url(./fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Playfair";
+  src: local("Playfair"),
+    url(./fonts/PlayfairDisplay-VariableFont_wght.ttf) format("truetype");
+}
+
+/* :root {
+  --base-gradient: #172625;
+  --mid: #233938;
+  --accent: #90744ff2;
+  --accent-light: #90744fcc;
+  --accent-inactive: #90744fb2;
+  --light-text: #b89c7a;
+  --box-shadow: 12pt 12pt 20pt #101a1a, -12pt -12pt 20pt #1e3230a0;
+  --box-shadow-small: 2pt 2pt 5pt #101a1ab0, -2pt -2pt 5pt #1e3230f0;
+  --text-shadow: 2pt 2pt 5pt #101a1ad0, -2pt -2pt 5pt #1e3230f0;
+} */
+
+html {
+  background: black;
+  user-select: none !important;
+  cursor: default !important;
+}
+
+body {
+  /* height: 100%;
+  width: 100%;
+  display: flex; */
+}
+
+body[background="true"] {
+  overflow: hidden;
+}
+
+.App {
+  /* width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch; */
+}
+
+.App[background="true"] {
+  overflow: hidden;
+}
+
+.App-content-wrapper {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+.App-header {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  /* z-index: -1; */
+  display: flex;
+  /* background: var(--base-gradient); */
+  z-index: 1000;
+}
+
+.App-psudo {
+  position: relative;
+  height: 470vh;
+  z-index: 9000;
+  pointer-events: none;
+}
+
+.App-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* background: var(--base-gradient); */
+  background-image: url("./assets/bg.jpg");
+  background-color: var(--base-gradient);
+  transition: all 0.5s;
+}
+
+.App-content[background="true"] {
+  transform: scale(0.98);
+  border-radius: 20pt;
+  opacity: 0.8;
+  /* animation: animateBackground 0.5s ease-in-out 0s 1 forwards; */
+}
+
+@keyframes animateBackground {
+  to {
+    background: #00114da0;
+  }
+}
+
+.Title-font {
+  font-size: min(calc(3vw + 20pt), 50pt);
+  letter-spacing: calc(-1pt - 0.1vw);
+}

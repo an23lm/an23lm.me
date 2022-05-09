@@ -1,0 +1,189 @@
+.Work-container {
+  position: fixed;
+  top: var(--top-nav-size);
+  right: 0;
+  width: calc(100% - var(--left-nav-size));
+  height: calc(100% - var(--top-nav-size));
+  /* padding-right: 20pt; */
+
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  opacity: 0;
+
+  transition: all 0.1s;
+
+  transform: scale(var(--work-container-scale));
+  opacity: var(--work-container-opacity);
+  z-index: var(--work-container-zindex);
+}
+
+.Work-content {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.Work-title {
+  font-family: "PlayfairItalic";
+  font-weight: 400;
+  color: var(--accent);
+  margin: 0;
+  /* margin-bottom: 20pt; */
+}
+
+.Work-cards-wrapper {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.Work-cards {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 50pt;
+  margin-right: 10pt;
+  transition: transform 60ms;
+  transform: translateY(var(--work-container-translatey));
+}
+
+.Elevated-card {
+  height: 200pt;
+  width: max(35vw, 350pt);
+  margin: 20pt;
+  background: var(--base-gradient);
+  box-shadow: var(--box-shadow);
+  border-radius: 20px;
+  display: flex;
+  cursor: pointer;
+
+  transition: all 0.5s;
+}
+
+.Work-card {
+  flex: 1;
+  padding: 16pt 24pt 16pt 24pt;
+  display: flex;
+  flex-direction: row;
+  margin: 8pt;
+  border-color: var(--accent);
+  border-width: 4pt;
+  border-style: double;
+  border-radius: 10pt;
+}
+
+.Work-card-left {
+  flex: 1;
+  flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  margin-right: 20pt;
+}
+
+.Work-card-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.Work-card-tag-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.Work-card-description {
+  flex: 0;
+  font-size: calc(0.5vw + 12pt);
+  /* letter-spacing: calc(-0.1vw - 1pt); */
+  color: var(--accent-light);
+  margin: 0;
+}
+
+.Work-card-name {
+  flex: 0;
+  font-size: calc(2vw + 20pt);
+  letter-spacing: calc(-0.1vw - 1pt);
+  color: var(--accent);
+  font-family: "Playfair";
+  margin: 0;
+  /* white-space: nowrap; */
+}
+
+.Work-card-tag {
+  flex: 0;
+  font-size: calc(0.3vw + 12pt);
+  color: var(--accent-light);
+  margin: 4pt;
+  white-space: nowrap;
+}
+
+.Work-card-tag-divider {
+  align-self: stretch;
+  height: 2pt;
+  border-radius: 2pt;
+  margin: 4pt;
+  background-color: var(--accent-light);
+}
+
+@media (max-width: 800px) {
+  .Work-title {
+    margin-left: 8pt;
+  }
+  
+  .Work-cards {
+    justify-content: center;
+    margin-right: 0pt;
+  }
+
+  .Elevated-card {
+    height: unset;
+    width: 90%;
+    margin: 24pt 8pt;
+    min-width: unset;
+  }
+
+  .Work-card {
+    flex-direction: column;
+  }
+
+  .Work-card-left {
+    margin-right: 0;
+  }
+
+  .Work-card-right {
+    align-self: flex-end;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-bottom: 24pt;
+  }
+
+  .Work-card-tag-list {
+    flex-direction: row;
+  }
+
+  .Work-card-tag-divider {
+    align-self: stretch;
+  }
+}
+
+.Popover {
+  position: absolute;
+  top: 0;
+  left: calc(-1 * var(--left-nav-size));
+  right: 0pt;
+  bottom: 0pt;
+  background-color: #00114d;
+}

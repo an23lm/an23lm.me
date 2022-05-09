@@ -1,0 +1,55 @@
+.Home-container {
+  min-height: 100vh;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+
+  opacity: 0;
+
+  transition: all 60ms;
+
+  transform: translateY(var(--home-translate-y)) scale(var(--home-scale));
+  opacity: var(--home-opacity);
+  z-index: var(--home-zindex);
+}
+
+.Home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Title {
+  font-family: "Playfair";
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  font-size: min(calc(8vw + 20pt), 120pt);
+  letter-spacing: -2pt;
+  white-space: pre-wrap;
+  color: var(--accent);
+  flex: 1;
+  padding-left: 10pt;
+  padding-right: 10pt;
+}
+
+.Subtitle {
+  font-family: "PlayfairItalic";
+  font-weight: 400;
+  font-size: min(calc(5vw + 20pt), 80pt);
+  letter-spacing: calc(-0.2vw - 2pt);
+  color: var(--accent);
+  white-space: pre-wrap;
+  padding-left: 10pt;
+  padding-right: 10pt;
+  text-align: center;
+}

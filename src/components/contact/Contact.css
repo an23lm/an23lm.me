@@ -1,0 +1,167 @@
+.Contact-container {
+  position: fixed;
+  top: var(--top-nav-size);
+  right: 0;
+  width: calc(100% - var(--left-nav-size));
+  height: calc(100% - var(--top-nav-size));
+
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  opacity: 0;
+
+  transition: all 0.1s;
+
+  transform: scale(var(--contact-container-scale));
+  opacity: var(--contact-container-opacity);
+  z-index: var(--contact-container-zindex);
+}
+
+.Contact-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10pt;
+}
+
+.Contact-e-card {
+  min-height: 150pt;
+  width: 90%;
+  /* min-width: 90%; */
+  max-width: 1200pt;
+  background: var(--base-gradient);
+  box-shadow: var(--box-shadow);
+  border-radius: 20px;
+  display: flex;
+}
+
+.Contact-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: calc(2vw + 10pt);
+
+  margin: 8pt;
+  border-color: var(--accent);
+  border-width: 4pt;
+  border-style: double;
+  border-radius: 10pt;
+}
+
+.Contact-card-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-right: 2vw;
+}
+
+.Contact-card-lines {
+  flex: 1 1 200pt;
+  margin-right: 20pt;
+  margin-bottom: min(2vh, 40pt);
+}
+
+.Contact-card-top {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+}
+
+.Contact-card-bottom {
+  /* flex: 0 */
+}
+
+.Contact-card-right {
+  flex: 1 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.Contact-card-subtitle {
+  font-family: 'Playfair';
+  font-weight: 400;
+  color: var(--accent);
+  font-size: calc(2vw + 16pt);
+  letter-spacing: calc(-0.1vw - 1pt);
+  margin: 0;
+}
+
+.Contact-card-title {
+  font-family: 'Playfair';
+  font-weight: 400;
+  color: var(--accent);
+  font-size: calc(5vw + 20pt);
+  letter-spacing: calc(-0.1vw - 2pt);
+  margin: 0;
+}
+
+.Contact-card-line {
+  height: 4pt;
+  border-radius: 2pt;
+  width: max(60%, 200pt);
+  background-color: var(--accent-inactive);
+  margin-bottom: calc(1vw + 5pt)
+}
+
+.Contact-card-link {
+  font-weight: 400;
+  color: var(--accent);
+  font-size: calc(1vw + 16pt);
+  margin: 0;
+  margin-bottom: 20pt;
+  text-align: right;
+}
+
+@media (max-width: 800px) {
+
+  .Contact-content {
+    margin-top: 10pt;
+    /* padding: 0pt 10pt; */
+  }
+
+  .Contact-card {
+    margin: 0pt;
+  }
+
+  .Contact-card-link {
+    margin-bottom: 10pt;
+    text-align: right;
+  }
+
+  .Contact-card-lines {
+    flex: 1 1 100%;
+    margin-right: 0pt;
+    margin-top: 10pt;
+    margin-bottom: 10pt;
+  }
+
+  .Contact-card-line {
+    height: 2pt;
+    margin-bottom: 10pt;
+    width: 100%;
+  }
+  
+  .Contact-card {
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    /* padding: 15pt 20pt; */
+    /* width: 100vw; */
+  }
+
+  .Contact-card-left {
+    margin-right: 0;
+  }
+
+  .Contact-card-right {
+    flex: 1;
+  }
+
+  .Contact-filler {
+    flex: 1;
+  }
+}

@@ -1,0 +1,116 @@
+.About-container {
+  min-height: 100vh;
+
+  position: fixed;
+  top: var(--top-nav-size);
+  right: 0;
+  width: calc(100% - var(--left-nav-size));
+  height: calc(100% - var(--top-nav-size));
+
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  opacity: 0;
+
+  transition: all 0.1s;
+
+  transform: scale(var(--about-container-scale));
+  opacity: var(--about-container-opacity);
+  z-index: var(--about-container-zindex);
+}
+
+.About-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.About-title-wrapper {
+  flex: 0
+}
+
+.About-title {
+  font-family: "PlayfairItalic";
+  font-weight: 400;
+  color: var(--accent);
+  margin: 0;
+}
+
+@media (min-width: 801px) {
+  .About-list {
+    flex: 1;
+    display: flex;
+    flex-flow: row nowrap;
+    transition: all 0.1s;
+  }
+
+  .Move-right {
+    transform: translateX(var(--about-list-translate-right));
+    width: calc(var(--move-right-list-width) + var(--left-nav-size));
+  }
+
+  .Move-left {
+    transform: translateX(var(--about-list-translate-left));
+    width: calc(var(--move-left-list-width) + var(--left-nav-size));
+  }
+
+  .About-list-item {
+    font-family: "PlayfairItalic";
+    letter-spacing: calc(-2pt - 0.2vw);
+    font-size: min(calc(40pt + 4vw), 100pt);;
+    margin-right: calc(40pt + 2vw);
+    color: var(--light-text);
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 800px) {
+  .About-title {
+    margin-left: 8pt;
+  }
+  
+  .About-list-wrapper {
+    flex: 1;
+    overflow: hidden;
+    margin-left: 16pt;
+  }
+
+  .About-list-clip {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    background: linear-gradient(
+        0deg,
+        #001a76 0.25%,
+        rgba(0, 18, 83, 0) 12.18%,
+        rgba(0, 24, 110, 0) 87.37%,
+        #001a76 99.25%
+      ),
+      transparent;
+  }
+
+  .About-list {
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    transition: transform 60ms;
+    height: calc(var(--move-up-list-height) + var(--top-nav-size));
+  }
+
+  .Move-up {
+    transform: translateY(var(--about-list-translate-up));
+  }
+
+  .About-list-item {
+    font-family: "PlayfairItalic";
+    letter-spacing: calc(-1pt - 0.1vw);
+    font-size: min(calc(12pt + 4vw), 50pt);
+    color: var(--light-text);
+    white-space: normal;
+    margin: 0;
+  }
+}
