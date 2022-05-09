@@ -52,13 +52,17 @@ export default function WorkDetailModal({ showModal, workId, setModalOpen }) {
 		else if (item.type === "github")
 			child = (
 				<div className="Link GithubLink">
-					<img src={GithubIcon} className="GithubIcon" />
+					<img src={GithubIcon} className="GithubIcon" alt="Github link" />
 				</div>
 			);
 		else if (item.type === "appstore")
 			child = (
 				<div className="Link AppStoreLink">
-					<img src={AppStoreIcon} className="AppStoreIcon" />
+					<img
+						src={AppStoreIcon}
+						className="AppStoreIcon"
+						alt="App Store Link"
+					/>
 				</div>
 			);
 
@@ -75,7 +79,11 @@ export default function WorkDetailModal({ showModal, workId, setModalOpen }) {
 
 	const image = (imageItem, index) => (
 		<div key={`${index}`} className="ImageWrapper">
-			<img src={imageItem.url} className="Image" />
+			<img
+				src={imageItem.url}
+				className="Image"
+				alt="Screenshot of the project"
+			/>
 		</div>
 	);
 
