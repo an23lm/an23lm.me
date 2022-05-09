@@ -117,6 +117,15 @@
   text-align: right;
 }
 
+.Contact-card-link>a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.Contact-card-link>a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 800px) {
 
   .Contact-content {
