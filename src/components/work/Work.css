@@ -47,7 +47,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  margin-bottom: 50pt;
+  margin-bottom: 40pt;
   margin-right: 10pt;
   transition: transform 60ms;
   transform: translateY(var(--work-container-translatey));
@@ -107,6 +107,29 @@
   /* letter-spacing: calc(-0.1vw - 1pt); */
   color: var(--accent-light);
   margin: 0;
+}
+
+.More-work-footer {
+  flex: 0;
+  font-size: calc(0.5vw + 12pt);
+  font-weight: 400;
+  /* letter-spacing: calc(-0.1vw - 1pt); */
+  color: var(--accent-light);
+  margin: 0;
+  margin-bottom: 30pt;
+  margin-right: 20pt;
+  text-align: center;
+}
+
+.Footer-link {
+  color: var(--accent);
+  font-weight: 400;
+  letter-spacing: 0.3pt;
+  text-decoration: none;
+}
+
+.Footer-link:hover {
+  text-decoration: underline;
 }
 
 .Work-card-name {
