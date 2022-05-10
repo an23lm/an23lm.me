@@ -21,7 +21,7 @@ export default function Contact() {
 							{/* <div className="Contact-filler" /> */}
 							<div className="Contact-card-right">
 								<p className="Contact-card-link">
-									<a href="mailto:an23lm@gmail.com">an23lm@gmail.com</a>
+									<a href="mailto:an23lm+w@gmail.com">an23lm@gmail.com</a>
 								</p>
 								<p className="Contact-card-link">
 									<a href="https://github.com/an23lm">github.com/an23lm</a>
