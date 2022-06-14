@@ -1,4 +1,10 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
+import {
+	useCallback,
+	useEffect,
+	useLayoutEffect,
+	useRef,
+	useState,
+} from "react";
 import WorkDetails from "../../WorkDetails";
 import "./Work.css";
 
@@ -14,12 +20,12 @@ export default function Work({
 
 	const [isMobile, setIsMobile] = useState(false);
 
-	function onResize() {
+	const onResize = useCallback(() => {
 		clientWidth.current = window.innerWidth;
 		setWorkContainerHeight(containerRef.current.offsetHeight);
 		setWorkCardsHeight(workCardsRef.current.offsetHeight);
 		calcMobileDiem();
-	}
+	}, [setWorkCardsHeight, setWorkContainerHeight]);
 
 	function calcMobileDiem() {
 		setIsMobile(clientWidth.current <= 800);
@@ -32,7 +38,7 @@ export default function Work({
 		return () => {
 			window.removeEventListener("resize", onResize);
 		};
-	}, []);
+	}, [onResize]);
 
 	useLayoutEffect(() => {
 		onResize();
