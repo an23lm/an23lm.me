@@ -151,6 +151,7 @@
 	justify-content: center;
 	/* margin-top: 24pt; */
 	flex-wrap: wrap;
+	gap: 8pt;
 }
 
 .WorkDetailLink {
@@ -160,8 +161,6 @@
 }
 
 .Link {
-	margin-right: 16pt;
-	margin-top: 24pt;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -206,6 +205,11 @@
 
 .AppStoreIcon {
 	height: 47px;
+	object-fit: contain;
+}
+
+.Award {
+	overflow: hidden;
 	object-fit: contain;
 }
 
