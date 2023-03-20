@@ -20,6 +20,15 @@ export default function Contact() {
               </div>
               {/* <div className="Contact-filler" /> */}
               <div className="Contact-card-right">
+                <p className="resume">
+                  <a
+                    className="resume-link"
+                    href="/Anselm Joseph - Resume.pdf"
+                    target="_blank"
+                  >
+                    View Resume
+                  </a>
+                </p>
                 <p className="Contact-card-link">
                   <a href="mailto:an23lm+from+website@gmail.com">
                     an23lm@gmail.com

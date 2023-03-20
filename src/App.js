@@ -224,6 +224,10 @@ function App() {
     setWorkModalVisible(true);
   };
 
+  useEffect(() => {
+    onScroll();
+  }, [isWorkModalVisible, onScroll]);
+
   return (
     <div className="App" ref={appRef}>
       <div className="App-content-wrapper">

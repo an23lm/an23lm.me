@@ -48,6 +48,7 @@
   border-width: 4pt;
   border-style: double;
   border-radius: 10pt;
+  transition: all 0.3s;
 }
 
 .Contact-card-left {
@@ -111,10 +112,49 @@
 .Contact-card-link {
   font-weight: 400;
   color: var(--accent);
-  font-size: calc(1vw + 16pt);
+  font-size: calc(1vw + 10pt);
+  margin: 0;
+  margin-bottom: 12pt;
+  text-align: right;
+}
+
+.resume {
+  font-weight: 600;
+  color: var(--accent);
+  font-size: calc(1vw + 12pt);
   margin: 0;
   margin-bottom: 20pt;
   text-align: right;
+  border-color: var(--accent);
+  border-width: 2pt;
+  border-style: solid;
+  border-radius: 8pt;
+  padding-left: 8pt;
+  padding-right: 8pt;
+  padding-top: 2pt;
+  padding-bottom: 2pt;
+
+  transition: all 0.3s;
+
+  cursor: pointer;
+}
+
+.resume:hover {
+  background-color: var(--accent);
+}
+
+.resume>a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.resume:hover .resume-link {
+  color: var(--mid)
+}
+
+.resume:hover>a {
+  color: var(--accent-inactive)
 }
 
 .Contact-card-link>a {
