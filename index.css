@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "PlayfairItalic";
+  src: local("PlayfairItalic"),
+    url(./fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Playfair";
+  src: local("Playfair"),
+    url(./fonts/PlayfairDisplay-VariableFont_wght.ttf) format("truetype");
+}
+
+:root {
+  --base-gradient: #172625;
+  --mid: #233938;
+  --accent: #90744ff2;
+  --accent-light: #90744fcc;
+  --accent-inactive: #90744fb2;
+  --light-text: #b89c7a;
+  --box-shadow: 12pt 12pt 20pt #101a1a, -12pt -12pt 20pt #1e3230a0;
+  --box-shadow-small: 2pt 2pt 5pt #101a1ab0, -2pt -2pt 5pt #1e3230f0;
+  --text-shadow: 2pt 2pt 5pt #101a1ad0, -2pt -2pt 5pt #1e3230f0;
+}
+
+.Home-container {
+  min-height: 100vh;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+
+  opacity: 0;
+
+  transition: all 60ms;
+
+  transform: translateY(var(--home-translate-y)) scale(var(--home-scale));
+  opacity: var(--home-opacity);
+  z-index: var(--home-zindex);
+}
+
+.Home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Title {
+  font-family: "Playfair";
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  font-size: min(calc(8vw + 20pt), 120pt);
+  letter-spacing: -2pt;
+  white-space: pre-wrap;
+  color: var(--accent);
+  flex: 1;
+  padding-left: 10pt;
+  padding-right: 10pt;
+}
+
+.Subtitle {
+  font-family: "PlayfairItalic";
+  font-weight: 400;
+  font-size: min(calc(5vw + 20pt), 80pt);
+  letter-spacing: calc(-0.2vw - 2pt);
+  color: var(--accent);
+  white-space: pre-wrap;
+  padding-left: 10pt;
+  padding-right: 10pt;
+  text-align: center;
+}
